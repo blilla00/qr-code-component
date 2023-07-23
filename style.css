@@ -6,20 +6,23 @@
     box-sizing: border-box;
 }
 
-/* styles for the qr componenet */
-/* responsible for centering the ENTIRE component on both
-desktop and mobile */
+/* Colors for the Document */
+:root {
+    --main-bg-color: hsl(212, 45%, 89%);
+    --component-bg-color: hsl(0, 0%, 100%);
+    --component-text-color: black;
+}
 
 
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black; 
     font-family: 'Outfit', sans-serif;
+    background-color: var(--main-bg-color);
 }
 
 
@@ -29,15 +32,15 @@ body {
     border: 1px solid black;
     display: flex;
     flex-direction: column;
-  /*  justify-content: space-between; */
     align-items: center;
+    background-color: var(--component-bg-color);
+    border-radius: 5%;
 }
 
 .qr-image {
     width: auto;
     height: auto;
-    padding: 4%;
-    border: 1px solid red;
+    padding: 5%;
 }
 
 .qr-image img {
@@ -50,10 +53,26 @@ body {
     padding: 8%;
     text-align: center;
     font-size: 1.25em;
+    color: var(--component-text-color);
+    font-weight: 700;
 }
 
 .qr-desc {
     text-align: center;
-    padding: 4% 4% 4% 4%;
+    padding: 0 8% 8% 8%;
     font-size: 15px;
+    color: var(--component-text-color);
+    font-weight: 400;
+    opacity: 75%s;
+}
+
+.attribution { font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    padding: 1em;
+}
+ 
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
